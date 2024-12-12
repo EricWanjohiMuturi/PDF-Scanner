@@ -1,0 +1,56 @@
+{% extends "lead/base.html" %}
+{% load static %}
+
+{% block title %}The Results{% endblock title %}
+
+{% block content %}
+<div class="container border rounded">
+    <h1 class="text-center border-bottom m-5">Keyword Search Results</h1>
+    <div class="row d-flex">
+        <div class="col-6 p-4 bg-light rounded border shadow-sm m-2">
+            <p><strong>Keyword:</strong> {{ keyword }}</p>
+        </div>
+        <div class="col-6 p-4 bg-light rounded border shadow-sm m-2">
+            <p><strong>Total Occurrences:</strong> {{ keyword_count }}</p>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <h2 class="text-center">Pages Where Keyword Appears:</h2>
+    <div class="row border mt-4">
+        <ul class="d-flex justify-content-between gap-2">
+            {% for page in keyword_pages %}
+                <li>Page {{ page }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div> -->
+
+<!-- <h2>Where the keyword appears:</h2>
+<ul>
+    {% for occurrence in keyword_contexts %}
+        <li>
+            <strong>Page {{ occurrence.page }}:</strong> 
+            <code>{{ occurrence.context }}</code>
+        </li>
+    {% endfor %}
+</ul> -->
+<div class="container">
+    <h2 class="text-center m-5">Where the keyword appears:</h2>
+    <div class="row d-flex gap-2 m-2">
+        {% for occurrence in keyword_contexts %}
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Page {{ occurrence.page }}</div>
+                <div class="card-body text-success">
+                <!-- <h5 class="card-title">Success card title</h5> -->
+                <p class="card-text">{{ occurrence.context }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- <a href="{% url 'scan-file' %}">Scan Another Document</a> -->
+
+{% endblock content %}

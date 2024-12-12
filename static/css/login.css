@@ -1,0 +1,78 @@
+ /* Center the login form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.login-form {
+    background: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form img {
+    width: 150px;
+    margin-bottom: 4rem;
+}
+
+.login-form input {
+    border-radius: 20px;
+    
+}
+
+.login-form button {
+    background-color: #8BC34A;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 4rem;
+}
+
+.login-form button:hover {
+    background-color: #74a141;
+}
+
+.login-form a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form .forgot{
+    text-decoration: underline;
+}
+
+.btn-loader {
+position: relative;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding-right: 2.5rem; /* Space for spinner */
+}
+
+.btn-loader .spinner-border {
+position: absolute;
+right: 0.5rem;
+width: 1rem;
+height: 1rem;
+display: none;
+}
+
+.btn-loading .spinner-border {
+display: inline-block;
+}

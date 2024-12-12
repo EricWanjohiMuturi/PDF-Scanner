@@ -1,0 +1,39 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg sticky-top z-3 px-2">
+    <div class="container d-flex bg-light justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"><img src="{% static 'images/JeyflexCo.png' %}" alt="Jeyflex Covigilance" width="150" height=""></a>
+      <!-- <h6 class="p-3 text-center">Afya <br>Covigilance</h6> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'scan-file' %}">Scan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+        </ul>
+        <div class="dropdown text-end">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small">
+              <!-- <li><a class="dropdown-item" href="#">New project...</a></li> -->
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+         </div>
+      </div>
+    </div>
+</nav>
+

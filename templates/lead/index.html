@@ -1,0 +1,29 @@
+{% extends "lead/base.html" %}
+{% load static %}
+{% block stylesheets %}<link rel="stylesheet" href="{% static 'css/styles.css' %}">{% endblock stylesheets %}
+{% block title %}Covigilance{% endblock title %}
+
+{% block content %}
+<div class="home">
+    <div class="container">
+       <!--  <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+
+                
+            </div>
+            <div class="col-4"></div>
+        </div> -->
+        <div class="hero">
+            <h1 >Jeyflex<br>Covigilance</h1>
+            <p >Research begins with me and you</p>
+            <div class="cta">
+                <a class="btn" href="{% url 'scan-file' %}" role="button">scan</a>
+                <a class="btn" href="#" role="button">History</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+{% endblock content %}

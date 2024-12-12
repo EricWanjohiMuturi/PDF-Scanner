@@ -1,0 +1,57 @@
+/* Custom styling */
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-container {
+display: flex;
+flex-grow: 1;
+}
+.sidebar {
+background-color: #f2faff;
+padding: 0.5rem;
+padding-left: 1rem;
+height: 100%;
+overflow-y: auto;
+border-radius: 10px;
+}
+.form-container {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-grow: 1;
+}
+.upload-form {
+background: white;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+width: 100%;
+max-width: 400px;
+text-align: center;
+}
+.upload-form img {
+width: 150px;
+margin-bottom: 4rem;
+}
+.upload-form input {
+margin-bottom: 1rem;
+border-radius: 20px;
+padding: 0.5rem 1rem;
+}
+.upload-form button {
+margin-top: 4rem;
+background-color: #8BC34A;
+border: none;
+border-radius: 20px;
+color: white;
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+}
+.upload-form button:hover {
+background-color: #74a141;
+}

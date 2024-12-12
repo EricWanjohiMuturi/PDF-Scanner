@@ -1,0 +1,52 @@
+{% extends "lead/base.html" %}
+{% load static %}
+
+{% block title %}Scan | Upload file{% endblock title %}
+
+{% block content %}
+<!-- Main container -->
+<div class="main-container z-1">
+    <!-- Sidebar -->
+    <div class="sidebar col-12 col-md-3">
+      <h5><strong>PREVIOUS SCANS</strong></h5>
+      <div class="mt-3">
+        <p><strong>Today</strong></p>
+        <p>COVID-19 Vaccine Advancements</p>
+        <p>POLIO Vaccine Administration</p>
+      </div>
+      <div class="mt-3">
+        <p><strong>This Week</strong></p>
+        <p>Object Relational Model</p>
+        <p>COVID-19 Vaccine Advancements</p>
+        <p>POLIO Vaccine Administration</p>
+        <p>Classes VS Hooks</p>
+        <p>Finance Bill 2024</p>
+      </div>
+      <div class="mt-3">
+        <!-- <p><strong>Last 30 Days</strong></p> -->
+        <p>SHIF vs NHIF</p>
+        <p>Object Relational Model</p>
+        <p>COVID-19 Vaccine Advancements</p>
+        <p>POLIO Vaccine Administration</p>
+        <p>Classes VS Hooks</p>
+        <p>Finance Bill 2024</p>
+      </div>
+    </div>
+    <!-- Form container -->
+    <div class="form-container col-12 col-md-9">
+      <form action="#" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="upload-form">
+          <!-- <img src="{% static 'images/JeyflexCo.png' %}" alt="Jeyflex Consultants"> -->
+          <h4 class="p-5 text-center">Afya <br>Covigilance</h4>
+          {% for upload in upload %}
+          {{ upload.label_tag }}
+          {{ upload }}
+          {% endfor %}
+          <button type="submit" id="loginButton">Scan</button>
+        </div>
+      </form>
+    </div>
+</div>
+
+{% endblock content %}

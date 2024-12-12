@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <title>Login | JeyFlex Covigilance</title>
+</head>
+<body>
+
+    <form class="login-form" method="post">
+      {% csrf_token %}
+        <img src="{% static 'images/JeyflexCo.png' %}" alt="Jeyflex Consultants">
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="email" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="password" required>
+        </div>
+        <button id="loginButton" type="submit" class="btn-loader">
+          Login
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        </button>
+        <div class="mt-3 forgot">
+          <a href="{% url 'contact-admin' %}">Forgot Password?</a>
+        </div>
+    </form>
+    <script src="{% static 'js/loader.js' %}" ></script>
+</body>
+</html>
